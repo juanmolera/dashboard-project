@@ -1,3 +1,3 @@
 # dashboard-project
 
-![graffiti](images/graffi.png)
+![graffiti](images/graffiti.png)
