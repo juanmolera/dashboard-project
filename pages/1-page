@@ -1,0 +1,4 @@
+import streamlit as st
+
+st.markdown("# Análisis exploratorio de datos")
+st.sidebar.markdown("# Page 1")
