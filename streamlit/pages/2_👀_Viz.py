@@ -22,7 +22,7 @@ options = st.selectbox('Which city do you want to visualize?', ['Choose an optio
 if options == 'Madrid':
 
     st.markdown('#### Airbnb data example:')
-    df_madrid = pd.read_csv('data/kepler/airbnb_madrid.csv')
+    df_madrid = pd.read_csv('../data/kepler/airbnb_madrid.csv')
     st.table(df_madrid.sample(1))
 
     st.markdown('#### Airbnbs per district in Madrid:')
@@ -42,7 +42,7 @@ if options == 'Madrid':
 elif options == 'Porto':
 
     st.markdown('#### Airbnb data example:')
-    df_porto = pd.read_csv('data/kepler/airbnb_porto.csv')
+    df_porto = pd.read_csv('../data/kepler/airbnb_porto.csv')
     st.table(df_porto.sample(1))
 
     st.markdown('#### Airbnbs per district in Porto:')
@@ -60,7 +60,7 @@ elif options == 'Porto':
 elif options == 'Lisbon':
 
     st.markdown('#### Airbnb data example:')
-    df_lisbon = pd.read_csv('data/kepler/airbnb_lisbon.csv')
+    df_lisbon = pd.read_csv('../data/kepler/airbnb_lisbon.csv')
     st.table(df_lisbon.sample(1))
 
     st.markdown('#### Airbnbs per district in Lisbon:')
