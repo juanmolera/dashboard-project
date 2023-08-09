@@ -38,6 +38,7 @@ if options == 'Madrid':
     
     if options2 in df_madrid['District'].unique().tolist():
 
+        # District information in detail
         st.markdown(f'#### {options2} district:')
 
         col1, col2, col3 = st.columns(3)
@@ -67,6 +68,9 @@ if options == 'Madrid':
     options3 = st.selectbox('Which neighbourhood data do you want to visualize?', ['Choose an option'] + df_madrid['Neighbourhood'].unique().tolist())
     
     if options3 in df_madrid['Neighbourhood'].unique().tolist():
+
+        # Neighbourhood information in detail
+        st.markdown(f'#### {options3} neighbourhood:')
 
         col1, col2, col3 = st.columns(3)
 
