@@ -1,6 +1,8 @@
 import streamlit as st
 from PIL import Image
 
+st.set_page_config(page_title = 'Context', page_icon = '📚')
+
 # CSS access
 with open('css/style.css') as f:
     st.markdown(
