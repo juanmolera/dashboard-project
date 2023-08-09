@@ -31,7 +31,7 @@ if options == 'Madrid':
     st.markdown('#### Airbnbs per district in Madrid:')
     fig1 = px.histogram(df_madrid, x = df_madrid['District'])
     fig1.update_xaxes(categoryorder = 'total descending')
-    fig1.update_xaxes(tickangle=90)
+    fig1.update_xaxes(tickangle = 90)
     st.plotly_chart(fig1)
 
     options2 = st.selectbox('Which district data do you want to visualize?', ['Choose an option'] + df_madrid['District'].unique().tolist())
@@ -43,18 +43,18 @@ if options == 'Madrid':
         with col1:
 
             st.markdown('Total population')
-            st.line_chart([0, 1, 2, 3, 4])
+            st.metric(label='', value = 0)
 
             st.markdown('Population density')
-            st.line_chart([0, 1, 2, 3, 4])
+            st.metric(label='', value = 0)
 
         with col2:
 
             st.markdown('Square meters')
-            st.line_chart([4, 3, 2, 1, 0])
+            st.metric(label='', value = 0)
 
             st.markdown('Total Airbnbs')
-            st.line_chart([4, 3, 2, 1, 0])
+            st.metric(label='', value = df_madrid[df_madrid['District'] == options2].value_counts().sum())
 
     # Neighbourhood
     st.markdown('#### Airbnbs per neighbourhood in Madrid:')
@@ -75,7 +75,7 @@ elif options == 'Porto':
     st.markdown('#### Airbnbs per district in Porto:')
     fig1 = px.histogram(df_porto, x = df_porto['District'])
     fig1.update_xaxes(categoryorder = 'total descending')
-    fig1.update_xaxes(tickangle=90)
+    fig1.update_xaxes(tickangle = 90)
     st.plotly_chart(fig1)
 
     # Neighbourhood
@@ -97,7 +97,7 @@ elif options == 'Lisbon':
     st.markdown('#### Airbnbs per district in Lisbon:')
     fig1 = px.histogram(df_lisbon, x = df_lisbon['District'])
     fig1.update_xaxes(categoryorder = 'total descending')
-    fig1.update_xaxes(tickangle=90)
+    fig1.update_xaxes(tickangle = 90)
     st.plotly_chart(fig1)
 
     # Neighbourhood
