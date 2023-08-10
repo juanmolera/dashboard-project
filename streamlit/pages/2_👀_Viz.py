@@ -58,36 +58,36 @@ if options == 'Madrid':
             st.markdown('Total Airbnbs')
             st.metric(label='', value = df_madrid[df_madrid['District'] == options2].value_counts().sum())
 
-    # Neighbourhood
-    st.markdown('#### Airbnbs per neighbourhood in Madrid:')
-    fig2 = px.histogram(df_madrid, x = df_madrid['Neighbourhood'])
-    fig2.update_xaxes(categoryorder = 'total descending')
-    fig2.update_xaxes(tickangle = 90)
-    st.plotly_chart(fig2, use_container_width=True)
+        # Neighbourhood
+        st.markdown('#### Airbnbs per neighbourhood in Madrid:')
+        fig2 = px.histogram(df_madrid, x = df_madrid['Neighbourhood'][df_madrid['District'] == options2])
+        fig2.update_xaxes(categoryorder = 'total descending')
+        fig2.update_xaxes(tickangle = 90)
+        st.plotly_chart(fig2, use_container_width=True)
 
-    options3 = st.selectbox('Which neighbourhood data do you want to visualize?', ['Choose an option'] + df_madrid['Neighbourhood'].unique().tolist())
-    
-    if options3 in df_madrid['Neighbourhood'].unique().tolist():
+        options3 = st.selectbox('Which neighbourhood data do you want to visualize?', ['Choose an option'] + df_madrid['Neighbourhood'][df_madrid['District'] == options2].unique().tolist())
+        
+        if options3 in df_madrid['Neighbourhood'].unique().tolist():
 
-        # Neighbourhood information in detail
-        st.markdown(f'#### {options3} neighbourhood:')
+            # Neighbourhood information in detail
+            st.markdown(f'#### {options3} neighbourhood:')
 
-        col1, col2, col3 = st.columns(3)
+            col1, col2, col3 = st.columns(3)
 
-        with col1:
+            with col1:
 
-            st.markdown('Total population')
-            st.metric(label='', value = 0)
+                st.markdown('Total population')
+                st.metric(label='', value = 0)
 
-        with col2:
+            with col2:
 
-            st.markdown('Population density')
-            st.metric(label='', value = 0)
+                st.markdown('Population density')
+                st.metric(label='', value = 0)
 
-        with col3:
+            with col3:
 
-            st.markdown('Total Airbnbs')
-            st.metric(label='', value = df_madrid[df_madrid['Neighbourhood'] == options3].value_counts().sum())
+                st.markdown('Total Airbnbs')
+                st.metric(label='', value = df_madrid[df_madrid['Neighbourhood'] == options3].value_counts().sum())
 
 # Porto
 elif options == 'Porto':
