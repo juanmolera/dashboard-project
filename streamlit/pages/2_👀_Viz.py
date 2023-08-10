@@ -1,6 +1,9 @@
 # Streamlit
 import streamlit as st
 
+# My functions
+from src import stfunctions as fu
+
 # Data manipulation
 import pandas as pd
 
@@ -33,10 +36,7 @@ if options == 'Madrid':
     keplergl_static(map1)
 
     # Histogram
-    fig1 = px.histogram(df_madrid, x = df_madrid['District'])
-    fig1.update_xaxes(categoryorder = 'total descending')
-    fig1.update_xaxes(tickangle = 90)
-    st.plotly_chart(fig1, use_container_width=True)
+    st.plotly_chart(fu.histogram_viz(df_madrid, 'District'), use_container_width=True)
 
     # District
     options2 = st.selectbox('Which district data do you want to visualize?', ['Choose an option'] + sorted(df_madrid['District'].unique().tolist()))
@@ -64,11 +64,9 @@ if options == 'Madrid':
             st.metric(label='', value = df_madrid[df_madrid['District'] == options2].value_counts().sum())
 
         # Neighbourhood
-        st.markdown('#### Airbnbs per neighbourhood in Madrid:')
-        fig2 = px.histogram(df_madrid, x = df_madrid['Neighbourhood'][df_madrid['District'] == options2])
-        fig2.update_xaxes(categoryorder = 'total descending')
-        fig2.update_xaxes(tickangle = 90)
-        st.plotly_chart(fig2, use_container_width=True)
+        st.markdown(f'#### Airbnbs in {options2} neighbourhoods:')
+        
+        st.plotly_chart(fu.histogram_viz_with_filter(df_madrid, 'District', 'Neighbourhood', options2), use_container_width=True)
 
         options3 = st.selectbox('Which neighbourhood data do you want to visualize?', ['Choose an option'] + sorted(df_madrid['Neighbourhood'][df_madrid['District'] == options2].unique().tolist()))
         
