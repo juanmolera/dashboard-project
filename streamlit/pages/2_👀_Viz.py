@@ -5,8 +5,6 @@ import streamlit as st
 import pandas as pd
 
 # Data visualization
-import matplotlib.pyplot as plt
-import seaborn as sns
 import plotly.express as px
 
 # Kepler.gl maps
@@ -27,14 +25,21 @@ if options == 'Madrid':
     df_madrid = pd.read_csv('../data/kepler/airbnb_madrid.csv')
     st.table(df_madrid.sample(1))
 
-    # District
+    # District section
     st.markdown('#### Airbnbs per district in Madrid:')
+
+    # Kepler map
+    map1 = KeplerGl(height=400, data={'data1': df_madrid})#, config=config)
+    keplergl_static(map1)
+
+    # Histogram
     fig1 = px.histogram(df_madrid, x = df_madrid['District'])
     fig1.update_xaxes(categoryorder = 'total descending')
     fig1.update_xaxes(tickangle = 90)
     st.plotly_chart(fig1, use_container_width=True)
 
-    options2 = st.selectbox('Which district data do you want to visualize?', ['Choose an option'] + df_madrid['District'].unique().tolist())
+    # District
+    options2 = st.selectbox('Which district data do you want to visualize?', ['Choose an option'] + sorted(df_madrid['District'].unique().tolist()))
     
     if options2 in df_madrid['District'].unique().tolist():
 
@@ -65,7 +70,7 @@ if options == 'Madrid':
         fig2.update_xaxes(tickangle = 90)
         st.plotly_chart(fig2, use_container_width=True)
 
-        options3 = st.selectbox('Which neighbourhood data do you want to visualize?', ['Choose an option'] + df_madrid['Neighbourhood'][df_madrid['District'] == options2].unique().tolist())
+        options3 = st.selectbox('Which neighbourhood data do you want to visualize?', ['Choose an option'] + sorted(df_madrid['Neighbourhood'][df_madrid['District'] == options2].unique().tolist()))
         
         if options3 in df_madrid['Neighbourhood'].unique().tolist():
 
