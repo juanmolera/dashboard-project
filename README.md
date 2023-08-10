@@ -1,6 +1,6 @@
 # dashboard-project
 
-![graffiti](/streamlit/images/cover2.png)
+![tourist dictatorship?](/streamlit/images/cover2.png)
 
 ### Information sources:
 - [Inside Airbnb: Adding data to the debate](http://insideairbnb.com/get-the-data/) (Madrid, Porto, Lisbon)
