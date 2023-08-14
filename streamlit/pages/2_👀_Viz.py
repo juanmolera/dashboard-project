@@ -18,8 +18,10 @@ st.set_page_config(layout = 'wide', initial_sidebar_state = 'collapsed', page_ti
 
 st.markdown('# Viz')
 
+# Availables cities to choose
 cities = ['Madrid', 'Porto', 'Lisbon']
 
+# Chooses a city
 city = st.selectbox('Which city do you want to visualize?', ['Choose an option'] + cities)
 
 if city in cities:
@@ -39,7 +41,7 @@ if city in cities:
     # Histogram
     st.plotly_chart(fu.histogram_viz(df, 'District'), use_container_width=True)
 
-    # District
+    # Chooses a district
     district = st.selectbox('Which district data do you want to visualize?', ['Choose an option'] + sorted(df['District'].unique().tolist()))
     
     if district in df['District'].unique().tolist():
@@ -67,8 +69,10 @@ if city in cities:
         # Neighbourhood
         st.markdown(f'#### Airbnbs in {district} neighbourhoods:')
         
+        # Histogram
         st.plotly_chart(fu.histogram_with_filter_viz(df, 'District', 'Neighbourhood', district), use_container_width=True)
 
+        # Chooses a neighbourhood
         neighbourhood = st.selectbox('Which neighbourhood data do you want to visualize?', ['Choose an option'] + sorted(df['Neighbourhood'][df['District'] == district].unique().tolist()))
         
         if neighbourhood in df['Neighbourhood'].unique().tolist():
