@@ -5,13 +5,9 @@ import streamlit as st
 import pandas as pd
 
 # Data visualization
-import matplotlib.pyplot as plt
-import seaborn as sns
 import plotly.express as px
 
-# Kepler.gl maps
-from streamlit_keplergl import keplergl_static
-from keplergl import KeplerGl
+st.set_page_config(layout = 'wide', initial_sidebar_state = 'collapsed', page_title = 'Extras', page_icon = '🗺️')
 
-st.set_page_config(page_title = 'Extras', page_icon = '🗺️')
 
+df = pd.read_csv('../data/kepler/airbnb_madrid.csv')

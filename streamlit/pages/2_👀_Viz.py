@@ -2,13 +2,10 @@
 import streamlit as st
 
 # My functions
-from src import streamlit_functions as fu
+from src import viz_functions as viz
 
 # Data manipulation
 import pandas as pd
-
-# Data visualization
-import plotly.express as px
 
 # Kepler.gl maps
 from streamlit_keplergl import keplergl_static
@@ -36,10 +33,10 @@ if city in cities:
 
     # Kepler map
     config = {}
-    keplergl_static(fu.kepler_map_viz(df, config))
+    keplergl_static(viz.kepler_map_viz(df, config))
 
     # Histogram
-    st.plotly_chart(fu.histogram_viz(df, 'District'), use_container_width=True)
+    st.plotly_chart(viz.histogram_viz(df, 'District'), use_container_width=True)
 
     # Chooses a district
     district = st.selectbox('Which district data do you want to visualize?', ['Choose an option'] + sorted(df['District'].unique().tolist()))
@@ -70,7 +67,7 @@ if city in cities:
         st.markdown(f'#### Airbnbs in {district} neighbourhoods:')
         
         # Histogram
-        st.plotly_chart(fu.histogram_with_filter_viz(df, 'District', 'Neighbourhood', district), use_container_width=True)
+        st.plotly_chart(viz.histogram_with_filter_viz(df, 'District', 'Neighbourhood', district), use_container_width=True)
 
         # Chooses a neighbourhood
         neighbourhood = st.selectbox('Which neighbourhood data do you want to visualize?', ['Choose an option'] + sorted(df['Neighbourhood'][df['District'] == district].unique().tolist()))
