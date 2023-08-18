@@ -11,3 +11,4 @@ st.set_page_config(layout = 'wide', initial_sidebar_state = 'collapsed', page_ti
 
 
 df = pd.read_csv('../data/kepler/airbnb_madrid.csv')
+
