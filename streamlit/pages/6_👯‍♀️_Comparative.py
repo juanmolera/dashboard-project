@@ -1,6 +1,12 @@
 # Streamlit
 import streamlit as st
 
+# Data manipulation
+import pandas as pd
+
+# Random
+import random
+
 # My functions
 from src import streamlit_functions as lit
 
@@ -30,6 +36,13 @@ if city in cities:
 
         if second_city in cities:
 
+            random_city_df_to_show = random.choice([city, second_city])
+
+            # Pandas
+            st.markdown('#### Airbnb data example:')
+            df = pd.read_csv(f'../data/kepler/airbnb_{random_city_df_to_show.lower()}.csv')
+            st.table(df.sample(1))
+
             col1, col2 = st.columns(2)
 
             # First city:
@@ -43,5 +56,10 @@ if city in cities:
                 lit.city_streamlit(second_city)
 
     if comparative == 'No':
+
+        # Pandas
+        st.markdown('#### Airbnb data example:')
+        df = pd.read_csv(f'../data/kepler/airbnb_{city.lower()}.csv')
+        st.table(df.sample(1))
 
         lit.city_streamlit(city)

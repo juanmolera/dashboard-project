@@ -11,22 +11,30 @@ from src import viz_functions as viz
 from streamlit_keplergl import keplergl_static
 from keplergl import KeplerGl
 
+# Pepinillo
+import pickle
+
 def city_streamlit(city):
     '''
     Creates the streamlit page for the chosen city
     '''
 
-    # Pandas
-    st.markdown('#### Airbnb data example:')
+    # Dataframe creation
     df = pd.read_csv(f'../data/kepler/airbnb_{city.lower()}.csv')
-    st.table(df.sample(1))
 
     # District section
     st.markdown(f'#### Airbnbs per district in {city}:')
 
+    # Kepler map config
+    with open(f'../data/kepler/config_{city}.pickle', 'rb') as configuration:
+        config = pickle.load(configuration)
+
+    # Kepler map geojson
+    with open(f'../data/kepler/neighbourhood_{city}.geojson', 'r') as f:
+        geojson = f.read()
+
     # Kepler map
-    config = {}
-    keplergl_static(viz.kepler_map_viz(df, config))
+    keplergl_static(viz.kepler_map_viz(city.lower(), df, geojson, config))
 
     # Districts histogram
     st.plotly_chart(viz.histogram_viz(df, 'District'), use_container_width=True)

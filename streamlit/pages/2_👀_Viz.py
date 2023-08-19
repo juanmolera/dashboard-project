@@ -7,6 +7,9 @@ from src import viz_functions as viz
 # Data manipulation
 import pandas as pd
 
+# Pepinillo
+import pickle
+
 # Kepler.gl maps
 from streamlit_keplergl import keplergl_static
 from keplergl import KeplerGl
@@ -32,8 +35,13 @@ if city in cities:
     st.markdown(f'#### Airbnbs per district in {city}:')
 
     # Kepler map
-    config = {}
-    keplergl_static(viz.kepler_map_viz(df, config))
+    with open('../notebooks/config_mad_districts.pickle', 'rb') as configuration:
+        config = pickle.load(configuration)
+
+    with open('../data/kepler/neighbourhood_madrid.geojson', 'r') as f:
+        geojson = f.read()
+
+    keplergl_static(viz.kepler_map_viz(df, geojson, config))
 
     # Histogram
     st.plotly_chart(viz.histogram_viz(df, 'District'), use_container_width=True)

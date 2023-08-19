@@ -6,12 +6,15 @@ from streamlit_keplergl import keplergl_static
 from keplergl import KeplerGl
 
 # Kepler.gl map viz
-def kepler_map_viz(df, config):
+def kepler_map_viz(city, df, geojson, config):
     '''
     Creates Kepler map
     '''
 
-    map = KeplerGl(height=400, data={'data1': df}, config=config)
+    #map = KeplerGl(height=400, data={'data1': df}, config=config)
+
+    map = KeplerGl(height=400, data={f'airbnb_{city}': df}, config=config, show_docs=False);
+    map.add_data(data=geojson, name=f'neighbourhood_{city}');
 
     return map
 
@@ -33,7 +36,7 @@ def histogram_with_filter_viz(df, option, option2, filter):
     Creates histogram representation for the chosen district's neighbourhoods
     '''
 
-    fig = px.histogram(df, x = df[option2][df[option] == filter])
+    fig = px.histogram(df, x = df[option2][df[option] == filter], labels={'x': 'Neighbourhood'})
     fig.update_xaxes(categoryorder = 'total descending')
     fig.update_xaxes(tickangle = 270)
 
