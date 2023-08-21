@@ -19,8 +19,9 @@ def city_streamlit(city):
     Creates the streamlit page for the chosen city
     '''
 
-    # Dataframe creation
+    # Dataframes creation
     df = pd.read_csv(f'../data/kepler/airbnb_{city.lower()}.csv')
+    #district_population = pd.read_csv(f'../data/ayuntamiento/population_per_district_{city.lower()}.csv')
 
     # District section
     st.markdown(f'#### Airbnbs per district in {city}:')
@@ -45,7 +46,7 @@ def city_streamlit(city):
     if district in df['District'].unique().tolist():
 
         # District information in detail
-        st.markdown(f'#### {district} information in detail:')
+        st.markdown(f'#### {district} district information:')
 
         col1, col2, col3 = st.columns(3)
 
@@ -76,7 +77,7 @@ def city_streamlit(city):
         if neighbourhood in df['Neighbourhood'].unique().tolist():
 
             # Neighbourhood information in detail
-            st.markdown(f'#### {neighbourhood} neighbourhood:')
+            st.markdown(f'#### {neighbourhood} neighbourhood information:')
 
             col1, col2, col3 = st.columns(3)
 
