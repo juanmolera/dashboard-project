@@ -19,7 +19,7 @@ st.markdown('# Comparative viz')
 # Availables cities to choose
 cities = ['Madrid', 'Porto', 'Lisbon']
 
-# Chooses a city
+# City choice
 city = st.selectbox('Which city do you want to visualize?', ['Choose an option'] + cities)
 
 # If a city has been chosen:
@@ -30,15 +30,19 @@ if city in cities:
 
     if comparative == 'Yes':
 
-        #cities = cities.remove(city)
+        # Removes the city chosen before
+        cities.remove(city)
         
+        # Second city choice
         second_city = st.selectbox(f'With which city do you want to compare {city}?', ['Choose an option'] + cities)
 
         if second_city in cities:
 
+            # Picks a random city between the two cities chosen
             random_city_df_to_show = random.choice([city, second_city])
 
-            # Pandas
+            # Shows the random pandas example
+            # Reads the Airbnb data and creates a dataframe
             st.markdown('#### Airbnb data example:')
             df = pd.read_csv(f'../data/kepler/airbnb_{random_city_df_to_show.lower()}.csv')
             st.table(df.sample(1))

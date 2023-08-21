@@ -21,6 +21,9 @@ def city_streamlit(city):
 
     # Dataframes creation
     df = pd.read_csv(f'../data/kepler/airbnb_{city.lower()}.csv')
+
+    # Total population, population density by district
+    population = pd.read_csv('../data/kepler/population_density_by_district.csv')
     #district_population = pd.read_csv(f'../data/ayuntamiento/population_per_district_{city.lower()}.csv')
 
     # District section
@@ -35,7 +38,7 @@ def city_streamlit(city):
         geojson = f.read()
 
     # Kepler map
-    keplergl_static(viz.kepler_map_viz(city.lower(), df, geojson, config))
+    #keplergl_static(viz.kepler_map_viz(city.lower(), df, geojson, config))
 
     # Districts histogram
     st.plotly_chart(viz.histogram_viz(df, 'District'), use_container_width=True)
@@ -53,12 +56,12 @@ def city_streamlit(city):
         with col1:
 
             st.markdown('Total population')
-            st.metric(label='', value = 0)
+            st.metric(label='', value = population['Total'][population['District']==district].values[0])
 
         with col2:
 
             st.markdown('Population density')
-            st.metric(label='', value = 0)
+            st.metric(label='', value = population['Density'][population['District']==district].values[0])
 
         with col3:
 
