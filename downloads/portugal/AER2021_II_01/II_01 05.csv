@@ -1,0 +1,48 @@
+;;;;;;;;;;;;;;;;;;
+II.1.5 - População residente segundo os grandes grupos etários, de acordo com a Tipologia de áreas urbanas, por NUTS III, 2021;;;;;;;;;;;;;;;;;;
+II.1.5 - Population indicators by age groups, according to the Classification of urban areas, by NUTS III, 2021;;;;;;;;;;;;;;;;;;
+Unidade: N.º;;;;;;;;;;;;Unit: No.;;;;;;
+;0 a 14 anos;;;15 a 24 anos;;;25 a 64 anos;;;65 e mais anos;;;;;Desagregação Territorial;;;
+;APU;AMU;APR;APU;AMU;APR;APU;AMU;APR;APU;AMU;APR;;NUTS_2013;NUTS I;NUTS II;NUTS III;
+Portugal; 1 029 074;  174 963;  120 846;  821 206;  153 648;  109 203; 4 126 871;  765 958;  600 530; 1 670 066;  366 939;  412 738;;PT;;;;
+ Continente;  986 036;  163 000;  110 093;  784 384;  143 143;  100 039; 3 946 803;  716 448;  555 292; 1 612 380;  350 524;  396 230;;1;x;;;
+  Norte;  340 716;  68 397;  26 918;  290 349;  64 759;  27 266; 1 481 696;  314 220;  150 055;  575 512;  137 680;  110 314;;11;;x;;
+   Alto Minho;  14 054;  7 331;  4 174;  11 516;  6 811;  3 844;  60 717;  34 853;  22 046;  28 177;  19 594;  17 825;;111;;;x;
+   Cávado;  39 225;  14 591;   870;  32 650;  13 947;   958;  161 942;  64 936;  4 600;  54 137;  26 081;  2 663;;112;;;x;
+   Ave;  39 430;  8 712;  2 986;  34 404;  8 425;  3 096;  176 032;  40 332;  15 784;  64 332;  15 054;  9 169;;119;;;x;
+   Área Metropolitana do Porto;  201 353;  12 678;  2 934;  169 338;  11 479;  2 711;  879 823;  58 206;  13 805;  356 775;  24 101;  6 914;;11A;;;x;
+   Alto Tâmega;  2 348;  2 797;  2 473;  1 925;  2 517;  2 567;  10 331;  13 881;  15 546;  5 498;  10 098;  14 102;;11B;;;x;
+   Tâmega e Sousa;  30 927;  16 306;  3 849;  28 771;  16 330;  3 877;  135 405;  74 153;  18 711;  42 612;  27 222;  9 537;;11C;;;x;
+   Douro;  7 875;  4 359;  6 709;  6 630;  4 022;  7 174;  33 671;  20 420;  39 563;  13 621;  10 888;  28 736;;11D;;;x;
+   Terras de Trás-os-Montes;  5 504;  1 623;  2 923;  5 115;  1 228;  3 039;  23 775;  7 439;  20 000;  10 360;  4 642;  21 368;;11E;;;x;
+  Centro;  152 737;  59 361;  50 885;  123 541;  51 185;  46 869;  624 911;  261 637;  257 720;  270 703;  143 911;  192 292;;16;;x;;
+   Oeste;  28 203;  12 604;  6 937;  22 188;  10 539;  5 921;  108 233;  52 481;  30 108;  45 649;  26 207;  17 139;;16B;;;x;
+   Região de Aveiro;  29 910;  13 042;  3 564;  24 237;  10 497;  3 084;  126 342;  54 980;  16 887;  51 477;  26 190;  9 583;;16D;;;x;
+   Região de Coimbra;  28 562;  10 057;  10 882;  23 276;  8 627;  9 752;  123 358;  46 521;  54 861;  58 181;  26 027;  38 108;;16E;;;x;
+   Região de Leiria;  20 728;  8 020;  6 818;  16 276;  7 265;  6 320;  82 173;  35 088;  32 467;  31 997;  18 950;  21 867;;16F;;;x;
+   Viseu Dão Lafões;  16 610;  5 325;  7 110;  13 256;  5 071;  7 137;  64 743;  24 673;  37 183;  27 970;  15 832;  28 353;;16G;;;x;
+   Beira Baixa;  4 532;  1 920;  1 711;  3 600;  1 631;  1 577;  18 880;  8 995;  10 808;  7 645;  6 243;  13 189;;16H;;;x;
+   Médio Tejo;  15 380;  3 733;  6 922;  12 802;  3 417;  6 529;  61 454;  16 795;  35 468;  29 501;  10 420;  26 837;;16I;;;x;
+   Beiras e Serra da Estrela;  8 812;  4 660;  6 941;  7 906;  4 138;  6 549;  39 728;  22 104;  39 938;  18 283;  14 042;  37 216;;16J;;;x;
+  A. M. Lisboa;  394 138;  14 358;  2 308;  295 764;  10 736;  1 997; 1 463 037;  51 364;  9 498;  600 132;  21 691;  4 604;;170;;x;x;
+  Alentejo;  53 370;  13 120;  20 266;  41 611;  11 002;  16 823;  203 544;  58 387;  96 849;  95 234;  30 676;  64 528;;18;;x;;
+   Alentejo Litoral;  6 582;  1 919;  2 883;  4 701;  1 737;  2 218;  25 460;  10 784;  15 315;  12 922;  3 512;  8 871;;181;;;x;
+   Baixo Alentejo;  7 671;  3 289;  3 578;  5 681;  2 625;  2 971;  27 663;  13 651;  16 353;  12 769;  7 305;  11 390;;184;;;x;
+   Lezíria do Tejo;  20 484;  3 440;  6 307;  16 305;  2 960;  5 390;  77 163;  14 633;  29 067;  34 483;  8 157;  18 346;;185;;;x;
+   Alto Alentejo;  6 532;  2 161;  3 515;  5 220;  1 845;  2 912;  24 629;  9 762;  16 650;  11 770;  6 620;  12 846;;186;;;x;
+   Alentejo Central;  12 101;  2 311;  3 983;  9 704;  1 835;  3 332;  48 629;  9 557;  19 464;  23 290;  5 082;  13 075;;187;;;x;
+  Algarve;  45 075;  7 764;  9 716;  33 119;  5 461;  7 084;  173 615;  30 840;  41 170;  70 799;  16 566;  24 492;;150;;x;x;
+ R. A. Açores;  16 253;  8 995;  9 033;  12 984;  7 552;  7 457;  62 040;  35 839;  36 495;  17 596;  10 353;  11 891;;200;x;x;x;
+ R. A. Madeira;  26 785;  2 968;  1 720;  23 838;  2 953;  1 707;  118 028;  13 671;  8 743;  40 090;  6 062;  4 617;;300;x;x;x;
+;0 - 14 years;;;15 - 24 years;;;25 - 64 years;;;65 years and over;;;;;;;;
+;PUA;MUA;PRA;PUA;MUA;PRA;PUA;MUA;PRA;PUA;MUA;PRA;;;;;;
+© INE, I.P., Portugal, 2022. Informação disponível até 14 de outubro de 2022. Information available till 14th October, 2022.;;;;;;;;;;;;;;;;;;
+Fonte: INE, I.P., Estimativas Anuais da População Residente.;;;;;;;;;;;;;;;;;;
+"Source: Statistics Portugal, Annual Estimates of Resident Population.
+ 
+
+";;;;;;;;;;;;;;;;;;
+"Nota: A Tipologia de áreas urbanas, para fins estatísticos, corresponde à versão aprovada pela 39.ª (2014) deliberação da Secção Permanente de Coordenação Estatística do Conselho Superior de Estatística, publicada no Diário da República, 2ª série, n.º 144, de 29 de julho de 2014 (TIPAU 2014). 
+Os dados da população residente, utilizados no cálculo dos indicadores para 2021, resultam de um exercício ad hoc de estimativas de população residente para 31 de dezembro de 2021, calculadas com base nos resultados provisórios dos Censos 2021. Assim, os resultados dos indicadores para 2021 serão revistos na sequência da divulgação da nova série de estimativas de população pós-Censos 2021.";;;;;;;;;;;;;;;;;;
+"Note: The Classification of urban areas corresponds to the version approved by the 39th (2014) resolution of the Standing Section of Statistical Coordination of the Statistical Council, published in the Diário da República (Portuguese Official Gazette), 2nd series, no. 144, of July 29th, 2014 (TIPAU 2014).
+The resident population data, used in the calculation of the 2021 indicators are a result from an ad hoc exercise of resident population estimates for December 31, 2021, based on the provisional results of the 2021 Census. Thus, the results of the 2021 indicators will be revised following the release of the new series of post-2021 Census population estimates.";;;;;;;;;;;;;;;;;;

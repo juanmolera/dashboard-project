@@ -1,0 +1,38 @@
+Glossário - Sinais convencionais ;;;;;;;;
+Glossary - Conventional signs;;;;;;;;
+;;;;;;;;
+;Sinais convencionais ;;Conventional signs;;Unidades de medida;;;Units of measure
+;Valor com coeficiente de variação elevado ;§;Extremely unreliable value;;Euro;€;;Euro
+;Valor confidencial;…;Confidential value;;Euro por quilograma;€/kg;;Euro per kilogram
+;Valor inferior a metade do módulo da unidade utilizada  ;?;Less than half of the unit used;;Euro por habitante;€/hab.;€/inhab.;Euro per inhabitant
+;Valor não disponível ou com menor fiabilidade ;x;Value not available or less reliable;;Grama por litro;g/l;;Gramme per litre
+;Não aplicável ;// ;Not applicable;;Arqueação bruta;GT;;Gross tonnage
+;Quebra de série ; ?;Break in series;;Gigawatt hora;GWh;;Gigawatt hour
+;Valor preliminar ;Pe ;Preliminary value;;Hectare;ha;;Hectare
+;Valor provisório ;Po ;Provisional value;;Hectolitro;hl;;Hectolitre
+;Valor rectificado  ;Rc;Rectified value;;Hectolitros por quintal;hl/q;;hectolitre per quintal
+;Valor revisto ;Rv ;Revised value;;Litro;l;;Litre
+;Percentagem ;% ;Percentage;;Quilograma;kg;;Kilogram
+;Permilagem ;‰ ;Permillage;;Quilograma por metro quadrado;kg/m²;;Kilogram per square metre
+;;;;;Quilograma por hectare;kg/ha;;Kilogram per hectare
+;;;;;Quilómetro;km;;Kilometre
+;;;;;Quilómetro quadrado;km2;;Square kilometre
+;;;;;Quilowatt;kW;;Kilowatt
+;;;;;Quilowatt hora;kWh;;Kilowatt hour
+;;;;;Megajoule por metro quadrado e por ano;MJ/m2/ano;MJ/m2/year;Megajoule per square metre and per year
+;;;;;Metro;m;;Metre
+;;;;;Metro quadrado;m2;;Square metre
+;;;;;Metro cúbico;m3;;Cubic metre
+;;;;;Milímetro;mm;;Millimetre
+;;;;;Número;N.º;No.;Number
+;;;;;Metro cúbico normal;Nm3;;Normal cubic metre
+;;;;;Grau centígrado;ºC;;Centigrade degree
+;;;;;Número quilómetro;N.º/km;No./km;Number per kilometre
+;;;;;Número por quilómetro quadrado;N.º/km2;No./km2;Number per square kilometre
+;;;;;Passageiros Quilómetro/Carruagens quilómetro;PKm/car.Km;;Passengers Kilometre/Carriages Kilometre
+;;;;;;;;
+;;;;;Quintal;q;;Quintal
+;;;;;Tonelada métrica;t;;Metric tonne
+;;;;;Tonelada equivalente de petróleo;tep;toe;Tonne of oil equivalent
+;;;;;Tonelagem de porte bruto;TPB;DWT;Deadweight tonnage
+;;;;;Unidade de trabalho anual;UTA;AWU;Annual work unit

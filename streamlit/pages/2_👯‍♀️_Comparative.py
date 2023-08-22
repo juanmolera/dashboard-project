@@ -44,7 +44,7 @@ if city in cities:
             # Shows the random pandas example
             # Reads the Airbnb data and creates a dataframe
             st.markdown('#### Airbnb data example:')
-            df = pd.read_csv(f'../data/kepler/airbnb_{random_city_df_to_show.lower()}.csv')
+            df = pd.read_csv(f'../data/airbnb_{random_city_df_to_show.lower()}.csv')
             st.table(df.sample(1))
 
             col1, col2 = st.columns(2)
@@ -62,8 +62,7 @@ if city in cities:
     if comparative == 'No':
 
         # Pandas
-        c
-        df = pd.read_csv(f'../data/kepler/airbnb_{city.lower()}.csv')
+        df = pd.read_csv(f'../data/airbnb_{city.lower()}.csv')
         st.table(df.sample(1))
 
         lit.city_streamlit(city)

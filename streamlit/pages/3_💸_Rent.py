@@ -13,7 +13,7 @@ st.set_page_config(layout = 'wide', initial_sidebar_state = 'collapsed', page_ti
 st.markdown('# Rent evolution viz')
 
 # Dataframes creation
-df = pd.read_csv(f'../data/kepler/airbnb_madrid.csv')
+df = pd.read_csv(f'../data/airbnb_madrid.csv')
 df_rent_price_evol = pd.read_csv('../data/rent_evolution_by_district_madrid.csv')
 
 # Choose a district
