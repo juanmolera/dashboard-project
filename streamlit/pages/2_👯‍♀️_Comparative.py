@@ -62,7 +62,7 @@ if city in cities:
     if comparative == 'No':
 
         # Pandas
-        st.markdown('#### Airbnb data example:')
+        c
         df = pd.read_csv(f'../data/kepler/airbnb_{city.lower()}.csv')
         st.table(df.sample(1))
 

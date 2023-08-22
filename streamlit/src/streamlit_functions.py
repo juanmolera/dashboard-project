@@ -20,21 +20,21 @@ def city_streamlit(city):
     '''
 
     # Dataframes creation
-    df = pd.read_csv(f'../data/kepler/airbnb_{city.lower()}.csv')
+    df = pd.read_csv(f'../data/airbnb_{city.lower()}.csv')
 
     # Total population, population density by district
-    population = pd.read_csv('../data/kepler/population_density_by_district.csv')
+    population = pd.read_csv('../data/population_density_by_district.csv')
     #district_population = pd.read_csv(f'../data/ayuntamiento/population_per_district_{city.lower()}.csv')
 
     # District section
     st.markdown(f'#### Airbnbs per district in {city}:')
 
     # Kepler map config
-    with open(f'../data/kepler/config_{city}.pickle', 'rb') as configuration:
+    with open(f'../data/config_{city}.pickle', 'rb') as configuration:
         config = pickle.load(configuration)
 
     # Kepler map geojson
-    with open(f'../data/kepler/neighbourhood_{city}.geojson', 'r') as f:
+    with open(f'../data/neighbourhood_{city}.geojson', 'r') as f:
         geojson = f.read()
 
     # Kepler map

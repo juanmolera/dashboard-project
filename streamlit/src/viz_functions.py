@@ -11,9 +11,7 @@ def kepler_map_viz(city, df, geojson, config):
     Creates Kepler map
     '''
 
-    #map = KeplerGl(height=400, data={'data1': df}, config=config)
-
-    map = KeplerGl(height=400, data={f'airbnb_{city}': df}, config=config, show_docs=False);
+    map = KeplerGl(height=400, data={f'airbnb_{city}': df}, config=config);
     map.add_data(data=geojson, name=f'neighbourhood_{city}');
 
     return map
