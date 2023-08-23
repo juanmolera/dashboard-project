@@ -23,7 +23,7 @@ def city_streamlit(city):
     df = pd.read_csv(f'../data/airbnb_{city.lower()}.csv')
 
     # Total population, population density by district
-    population = pd.read_csv('../data/population_density_by_district.csv')
+    population = pd.read_csv('../data/pop.csv')
     #district_population = pd.read_csv(f'../data/ayuntamiento/population_per_district_{city.lower()}.csv')
 
     # District section
@@ -66,7 +66,7 @@ def city_streamlit(city):
         with col3:
 
             st.markdown('Total Airbnbs')
-            st.metric(label='units', value = df[df['District'] == district].value_counts().sum())
+            st.metric(label='units', value = '{:,}'.format(df[df['District'] == district].value_counts().sum()).replace(',','.'))
 
         # Neighbourhood section
         st.markdown(f'#### Airbnbs in {district} neighbourhoods:')
