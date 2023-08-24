@@ -38,7 +38,7 @@ def city_streamlit(city):
         geojson = f.read()
 
     # Kepler map
-    #keplergl_static(viz.kepler_map_viz(city.lower(), df, geojson, config))
+    keplergl_static(viz.kepler_map_viz(city.lower(), df, geojson, config))
 
     # Districts histogram
     st.plotly_chart(viz.histogram_viz(df, 'District'), use_container_width=True)
