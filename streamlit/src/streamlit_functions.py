@@ -60,7 +60,7 @@ def city_streamlit(city):
         with col2:
 
             st.markdown('Population density')
-            st.metric(label='habitants/km2', value = population['Density'][population['District']==district].values[0])
+            st.metric(label='habitants/km\u00b2', value = population['Density'][population['District']==district].values[0])
 
         with col3:
 
