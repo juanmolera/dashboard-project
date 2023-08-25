@@ -23,8 +23,7 @@ def city_streamlit(city):
     df = pd.read_csv(f'../data/airbnb_{city.lower()}.csv')
 
     # Total population, population density by district
-    population = pd.read_csv('../data/pop.csv')
-    #district_population = pd.read_csv(f'../data/ayuntamiento/population_per_district_{city.lower()}.csv')
+    population = pd.read_csv('../data/population_and_density_by_district.csv')
 
     # District section
     st.markdown(f'#### Airbnbs per district in {city}:')
@@ -56,7 +55,7 @@ def city_streamlit(city):
         with col1:
 
             st.markdown('Total population')
-            st.metric(label='habitants', value = population['Total'][population['District']==district].values[0])
+            st.metric(label='habitants', value = population['Population'][population['District']==district].values[0])
 
         with col2:
 
@@ -74,6 +73,7 @@ def city_streamlit(city):
         # Neighbourhoods histogram
         st.plotly_chart(viz.histogram_with_filter_viz(df, 'District', 'Neighbourhood', district), use_container_width=True)
 
+        '''
         # Choose a neighbourhood
         neighbourhood = st.selectbox('Which neighbourhood data do you want to visualize?', ['Choose an option'] + sorted(df['Neighbourhood'][df['District'] == district].unique().tolist()))
 
@@ -98,3 +98,4 @@ def city_streamlit(city):
 
                 st.markdown('Total Airbnbs')
                 st.metric(label='', value = df[df['Neighbourhood'] == neighbourhood].value_counts().sum())
+        '''
