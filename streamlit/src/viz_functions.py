@@ -39,10 +39,11 @@ def histogram_with_filter_viz(df, option, option2, filter):
     Creates histogram representation for the chosen district's neighbourhoods
     '''
 
-    fig = px.histogram(df, x=df[option2][df[option] == filter], color=df[option2][df[option] == filter], labels={'x': 'Neighbourhood'}, color_discrete_sequence=px.colors.qualitative.Light24)
+    fig = px.histogram(df, x=df[option2][df[option] == filter], text_auto='.2s', color=df[option2][df[option] == filter], labels={'x': 'Neighbourhood'}, color_discrete_sequence=px.colors.qualitative.Light24)
     fig.update_xaxes(categoryorder = 'total descending')
     fig.update_xaxes(title='', visible=False, showticklabels=False)
     fig.update_yaxes(title='', visible=True, showticklabels=True)
     fig.update_layout(legend_traceorder='normal')
+    fig.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
 
     return fig
