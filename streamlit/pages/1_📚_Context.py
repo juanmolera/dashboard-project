@@ -1,14 +1,13 @@
 import streamlit as st
 from PIL import Image
 
-st.set_page_config(layout = 'wide', initial_sidebar_state = 'collapsed', page_title = 'Context', page_icon = '📚')
+st.set_page_config(layout='wide', initial_sidebar_state='collapsed', page_title='Context', page_icon='📚')
 
 # CSS access
 with open('css/style.css') as f:
     st.markdown(
         f'<style>{f.read()}</style>',
-        unsafe_allow_html=True,
-    )
+        unsafe_allow_html=True)
 
 st.markdown('# Context')
 

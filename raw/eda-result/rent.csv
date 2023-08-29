@@ -1,0 +1,309 @@
+Date,Value,District
+January 2022,14.7,Ciudad de Madrid
+February 2022,15.0,Ciudad de Madrid
+March 2022,15.0,Ciudad de Madrid
+April 2022,15.2,Ciudad de Madrid
+May 2022,15.4,Ciudad de Madrid
+June 2022,15.7,Ciudad de Madrid
+July 2022,15.7,Ciudad de Madrid
+August 2022,16.1,Ciudad de Madrid
+September 2022,16.3,Ciudad de Madrid
+October 2202,16.3,Ciudad de Madrid
+November 2022,16.2,Ciudad de Madrid
+December 2022,16.2,Ciudad de Madrid
+January 2023,16.5,Ciudad de Madrid
+February 2023,16.6,Ciudad de Madrid
+January 2022,17.9,Centro
+February 2022,18.3,Centro
+March 2022,18.5,Centro
+April 2022,18.4,Centro
+May 2022,18.5,Centro
+June 2022,18.5,Centro
+July 2022,18.5,Centro
+August 2022,18.9,Centro
+September 2022,19.2,Centro
+October 2202,19.4,Centro
+November 2022,20.0,Centro
+December 2022,20.3,Centro
+January 2023,21.1,Centro
+February 2023,21.4,Centro
+January 2022,14.7,Arganzuela
+February 2022,15.0,Arganzuela
+March 2022,15.1,Arganzuela
+April 2022,15.3,Arganzuela
+May 2022,15.2,Arganzuela
+June 2022,15.3,Arganzuela
+July 2022,15.3,Arganzuela
+August 2022,15.7,Arganzuela
+September 2022,15.7,Arganzuela
+October 2202,15.8,Arganzuela
+November 2022,16.1,Arganzuela
+December 2022,16.1,Arganzuela
+January 2023,16.3,Arganzuela
+February 2023,16.3,Arganzuela
+January 2022,15.2,Retiro
+February 2022,15.3,Retiro
+March 2022,15.8,Retiro
+April 2022,15.9,Retiro
+May 2022,16.0,Retiro
+June 2022,16.0,Retiro
+July 2022,16.0,Retiro
+August 2022,16.3,Retiro
+September 2022,16.4,Retiro
+October 2202,16.9,Retiro
+November 2022,17.3,Retiro
+December 2022,17.2,Retiro
+January 2023,17.5,Retiro
+February 2023,17.5,Retiro
+January 2022,17.6,Salamanca
+February 2022,18.2,Salamanca
+March 2022,18.3,Salamanca
+April 2022,18.5,Salamanca
+May 2022,18.5,Salamanca
+June 2022,18.9,Salamanca
+July 2022,18.9,Salamanca
+August 2022,19.4,Salamanca
+September 2022,20.0,Salamanca
+October 2202,20.0,Salamanca
+November 2022,19.8,Salamanca
+December 2022,20.0,Salamanca
+January 2023,20.4,Salamanca
+February 2023,21.0,Salamanca
+January 2022,15.3,Chamartín
+February 2022,15.6,Chamartín
+March 2022,16.0,Chamartín
+April 2022,16.1,Chamartín
+May 2022,16.2,Chamartín
+June 2022,16.2,Chamartín
+July 2022,16.2,Chamartín
+August 2022,16.7,Chamartín
+September 2022,16.7,Chamartín
+October 2202,16.7,Chamartín
+November 2022,16.7,Chamartín
+December 2022,16.8,Chamartín
+January 2023,17.2,Chamartín
+February 2023,17.6,Chamartín
+January 2022,15.3,Tetuán
+February 2022,15.4,Tetuán
+March 2022,15.4,Tetuán
+April 2022,15.5,Tetuán
+May 2022,15.5,Tetuán
+June 2022,15.7,Tetuán
+July 2022,15.7,Tetuán
+August 2022,16.0,Tetuán
+September 2022,16.3,Tetuán
+October 2202,16.3,Tetuán
+November 2022,16.5,Tetuán
+December 2022,16.6,Tetuán
+January 2023,16.9,Tetuán
+February 2023,17.0,Tetuán
+January 2022,17.2,Chamberí
+February 2022,17.1,Chamberí
+March 2022,17.3,Chamberí
+April 2022,17.6,Chamberí
+May 2022,17.8,Chamberí
+June 2022,18.0,Chamberí
+July 2022,18.0,Chamberí
+August 2022,18.0,Chamberí
+September 2022,18.3,Chamberí
+October 2202,18.7,Chamberí
+November 2022,19.0,Chamberí
+December 2022,19.7,Chamberí
+January 2023,20.0,Chamberí
+February 2023,20.0,Chamberí
+January 2022,12.4,Fuencarral - El Pardo
+February 2022,12.4,Fuencarral - El Pardo
+March 2022,12.6,Fuencarral - El Pardo
+April 2022,12.6,Fuencarral - El Pardo
+May 2022,12.6,Fuencarral - El Pardo
+June 2022,12.7,Fuencarral - El Pardo
+July 2022,12.7,Fuencarral - El Pardo
+August 2022,12.8,Fuencarral - El Pardo
+September 2022,12.9,Fuencarral - El Pardo
+October 2202,13.0,Fuencarral - El Pardo
+November 2022,13.1,Fuencarral - El Pardo
+December 2022,13.1,Fuencarral - El Pardo
+January 2023,13.2,Fuencarral - El Pardo
+February 2023,13.5,Fuencarral - El Pardo
+January 2022,14.2,Moncloa - Aravaca
+February 2022,14.3,Moncloa - Aravaca
+March 2022,14.7,Moncloa - Aravaca
+April 2022,14.7,Moncloa - Aravaca
+May 2022,15.1,Moncloa - Aravaca
+June 2022,15.2,Moncloa - Aravaca
+July 2022,15.2,Moncloa - Aravaca
+August 2022,15.6,Moncloa - Aravaca
+September 2022,15.8,Moncloa - Aravaca
+October 2202,15.8,Moncloa - Aravaca
+November 2022,15.6,Moncloa - Aravaca
+December 2022,15.3,Moncloa - Aravaca
+January 2023,15.3,Moncloa - Aravaca
+February 2023,15.4,Moncloa - Aravaca
+January 2022,12.0,Latina
+February 2022,12.0,Latina
+March 2022,12.0,Latina
+April 2022,12.0,Latina
+May 2022,12.3,Latina
+June 2022,12.5,Latina
+July 2022,12.5,Latina
+August 2022,12.7,Latina
+September 2022,12.9,Latina
+October 2202,12.9,Latina
+November 2022,13.1,Latina
+December 2022,13.0,Latina
+January 2023,13.1,Latina
+February 2023,13.0,Latina
+January 2022,11.7,Carabanchel
+February 2022,11.7,Carabanchel
+March 2022,11.8,Carabanchel
+April 2022,11.9,Carabanchel
+May 2022,12.0,Carabanchel
+June 2022,12.1,Carabanchel
+July 2022,12.1,Carabanchel
+August 2022,12.3,Carabanchel
+September 2022,12.5,Carabanchel
+October 2202,12.5,Carabanchel
+November 2022,12.7,Carabanchel
+December 2022,12.7,Carabanchel
+January 2023,12.6,Carabanchel
+February 2023,12.6,Carabanchel
+January 2022,11.3,Usera
+February 2022,11.3,Usera
+March 2022,11.4,Usera
+April 2022,11.8,Usera
+May 2022,12.5,Usera
+June 2022,12.8,Usera
+July 2022,12.8,Usera
+August 2022,13.1,Usera
+September 2022,12.9,Usera
+October 2202,12.9,Usera
+November 2022,12.8,Usera
+December 2022,12.9,Usera
+January 2023,13.3,Usera
+February 2023,13.6,Usera
+January 2022,12.0,Puente de Vallecas
+February 2022,12.0,Puente de Vallecas
+March 2022,12.0,Puente de Vallecas
+April 2022,12.5,Puente de Vallecas
+May 2022,12.5,Puente de Vallecas
+June 2022,12.4,Puente de Vallecas
+July 2022,12.4,Puente de Vallecas
+August 2022,12.5,Puente de Vallecas
+September 2022,12.7,Puente de Vallecas
+October 2202,12.8,Puente de Vallecas
+November 2022,12.7,Puente de Vallecas
+December 2022,12.9,Puente de Vallecas
+January 2023,13.1,Puente de Vallecas
+February 2023,13.2,Puente de Vallecas
+January 2022,11.1,Moratalaz
+February 2022,11.2,Moratalaz
+March 2022,11.2,Moratalaz
+April 2022,11.2,Moratalaz
+May 2022,11.4,Moratalaz
+June 2022,11.3,Moratalaz
+July 2022,11.3,Moratalaz
+August 2022,11.7,Moratalaz
+September 2022,12.0,Moratalaz
+October 2202,11.9,Moratalaz
+November 2022,11.9,Moratalaz
+December 2022,12.0,Moratalaz
+January 2023,12.1,Moratalaz
+February 2023,12.1,Moratalaz
+January 2022,13.0,Ciudad Lineal
+February 2022,13.0,Ciudad Lineal
+March 2022,13.1,Ciudad Lineal
+April 2022,13.3,Ciudad Lineal
+May 2022,13.4,Ciudad Lineal
+June 2022,13.6,Ciudad Lineal
+July 2022,13.6,Ciudad Lineal
+August 2022,13.7,Ciudad Lineal
+September 2022,13.8,Ciudad Lineal
+October 2202,13.8,Ciudad Lineal
+November 2022,14.1,Ciudad Lineal
+December 2022,14.3,Ciudad Lineal
+January 2023,14.3,Ciudad Lineal
+February 2023,14.2,Ciudad Lineal
+January 2022,12.6,Hortaleza
+February 2022,12.7,Hortaleza
+March 2022,12.8,Hortaleza
+April 2022,12.8,Hortaleza
+May 2022,12.8,Hortaleza
+June 2022,12.8,Hortaleza
+July 2022,12.8,Hortaleza
+August 2022,13.0,Hortaleza
+September 2022,13.2,Hortaleza
+October 2202,13.2,Hortaleza
+November 2022,13.3,Hortaleza
+December 2022,13.3,Hortaleza
+January 2023,13.5,Hortaleza
+February 2023,13.7,Hortaleza
+January 2022,10.9,Villaverde
+February 2022,10.8,Villaverde
+March 2022,10.8,Villaverde
+April 2022,11.0,Villaverde
+May 2022,11.1,Villaverde
+June 2022,11.2,Villaverde
+July 2022,11.2,Villaverde
+August 2022,11.4,Villaverde
+September 2022,11.7,Villaverde
+October 2202,11.8,Villaverde
+November 2022,11.9,Villaverde
+December 2022,12.0,Villaverde
+January 2023,11.9,Villaverde
+February 2023,11.9,Villaverde
+January 2022,11.3,Villa de Vallecas
+February 2022,11.2,Villa de Vallecas
+March 2022,11.1,Villa de Vallecas
+April 2022,11.3,Villa de Vallecas
+May 2022,11.6,Villa de Vallecas
+June 2022,11.8,Villa de Vallecas
+July 2022,11.8,Villa de Vallecas
+August 2022,11.7,Villa de Vallecas
+September 2022,11.7,Villa de Vallecas
+October 2202,11.6,Villa de Vallecas
+November 2022,11.7,Villa de Vallecas
+December 2022,11.9,Villa de Vallecas
+January 2023,12.0,Villa de Vallecas
+February 2023,11.8,Villa de Vallecas
+January 2022,10.5,Vicálvaro
+February 2022,10.5,Vicálvaro
+March 2022,10.5,Vicálvaro
+April 2022,10.6,Vicálvaro
+May 2022,10.8,Vicálvaro
+June 2022,11.0,Vicálvaro
+July 2022,11.0,Vicálvaro
+August 2022,11.1,Vicálvaro
+September 2022,11.2,Vicálvaro
+October 2202,11.3,Vicálvaro
+November 2022,11.3,Vicálvaro
+December 2022,11.2,Vicálvaro
+January 2023,11.3,Vicálvaro
+February 2023,11.4,Vicálvaro
+January 2022,11.5,San Blas - Canillejas
+February 2022,11.6,San Blas - Canillejas
+March 2022,11.8,San Blas - Canillejas
+April 2022,12.0,San Blas - Canillejas
+May 2022,12.0,San Blas - Canillejas
+June 2022,12.1,San Blas - Canillejas
+July 2022,12.1,San Blas - Canillejas
+August 2022,12.2,San Blas - Canillejas
+September 2022,12.3,San Blas - Canillejas
+October 2202,12.4,San Blas - Canillejas
+November 2022,12.5,San Blas - Canillejas
+December 2022,12.5,San Blas - Canillejas
+January 2023,12.4,San Blas - Canillejas
+February 2023,12.7,San Blas - Canillejas
+January 2022,11.6,Barajas
+February 2022,11.7,Barajas
+March 2022,12.2,Barajas
+April 2022,12.4,Barajas
+May 2022,12.4,Barajas
+June 2022,12.2,Barajas
+July 2022,12.2,Barajas
+August 2022,12.2,Barajas
+September 2022,12.1,Barajas
+October 2202,12.2,Barajas
+November 2022,12.4,Barajas
+December 2022,12.5,Barajas
+January 2023,12.6,Barajas
+February 2023,12.6,Barajas

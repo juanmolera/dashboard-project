@@ -22,8 +22,8 @@ def histogram_viz(df, option):
     Creates histogram representation for the chosen city's districts
     '''
 
-    fig = px.histogram(df, x = df[option], text_auto='.2s', color=df[option], labels={'x': 'Districts'}, color_discrete_sequence=px.colors.qualitative.Light24)
-    fig.update_xaxes(categoryorder = 'total descending')
+    fig = px.histogram(df, x=df[option], text_auto='.2s', color=df[option], labels={'x': 'Districts'}, color_discrete_sequence=px.colors.qualitative.Light24)
+    fig.update_xaxes(categoryorder='total descending')
     fig.update_xaxes(title='', visible=False, showticklabels=False)
     fig.update_yaxes(title='', visible=True, showticklabels=True)
     fig.update_layout(legend_traceorder='normal')
@@ -40,7 +40,7 @@ def histogram_with_filter_viz(df, option, option2, filter):
     '''
 
     fig = px.histogram(df, x=df[option2][df[option] == filter], text_auto='.2s', color=df[option2][df[option] == filter], labels={'x': 'Neighbourhood'}, color_discrete_sequence=px.colors.qualitative.Light24)
-    fig.update_xaxes(categoryorder = 'total descending')
+    fig.update_xaxes(categoryorder='total descending')
     fig.update_xaxes(title='', visible=False, showticklabels=False)
     fig.update_yaxes(title='', visible=True, showticklabels=True)
     fig.update_layout(legend_traceorder='normal')

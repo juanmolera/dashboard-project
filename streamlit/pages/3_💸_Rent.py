@@ -25,6 +25,8 @@ df_rent_price_evol = pd.read_csv('../data/rent_price_evolution_by_district_madri
 df_home_price_evol = pd.read_csv('../data/second_hand_home_price_evolution_by_district_madrid.csv')
 df_reviews_per_month = pd.read_csv('../data/reviews_per_month_airbnb_madrid.csv')
 df_may_june = pd.read_csv('../data/reviews_may_june_2023_airbnb.csv')
+rent = pd.read_csv('../data/rent.csv')
+mean_price = pd.read_csv('../data/mean_price_june_may_2023_airbnb.csv')
 
 # Choose a district
 district = st.selectbox('Which district data do you want to visualize?', ['Choose an option'] + sorted(df['District'].unique().tolist()))
@@ -62,9 +64,16 @@ if district in df['District'].unique().tolist():
         fig1.update_xaxes(tickangle = 270)
         st.plotly_chart(fig1, use_container_width=True)
 
+        st.markdown(f'#### Mean price in May 2023')
+        fig5 = px.histogram(mean_price, x=mean_price['District'][mean_price['Month'] == 'May 2023'], y=mean_price['Mean price'][mean_price['Month'] == 'May 2023'], text_auto='.2s', color=mean_price['District'][mean_price['Month'] == 'May 2023'])
+        fig5.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
+        fig5.update_xaxes(categoryorder = 'total descending')
+        fig5.update_xaxes(tickangle = 270)
+        st.plotly_chart(fig5, use_container_width=True)
+
         st.markdown(f'#### Rent price evolution [euros/m2] in {district}:')
         #fig2 = px.line(df_rent_price_evol, x=df_rent_price_evol['Date'], y=df_rent_price_evol[district], markers=True)
-        fig2 = px.line(df_rent_price_evol, x=df_rent_price_evol['Date'], y=df_rent_price_evol[district], markers=True)
+        fig2 = px.line(rent, x=rent['Date'].unique().tolist(), y=rent['Value'][(rent['District']==district) & (rent['District']=='Arganzuela')], markers=True)
         fig2.update_xaxes(tickangle = 270)
         st.plotly_chart(fig2, use_container_width=True)
 
@@ -76,6 +85,13 @@ if district in df['District'].unique().tolist():
         fig3.update_xaxes(categoryorder = 'total descending')
         fig3.update_xaxes(tickangle = 270)
         st.plotly_chart(fig3, use_container_width=True)
+
+        st.markdown(f'#### Mean price in June 2023')
+        fig6 = px.histogram(mean_price, x=mean_price['District'][mean_price['Month'] == 'June 2023'], y=mean_price['Mean price'][mean_price['Month'] == 'June 2023'], text_auto='.2s', color=mean_price['District'][mean_price['Month'] == 'June 2023'])
+        fig6.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
+        fig6.update_xaxes(categoryorder = 'total descending')
+        fig6.update_xaxes(tickangle = 270)
+        st.plotly_chart(fig6, use_container_width=True)
 
         st.markdown(f'#### Second hand home price evolution [euros] in {district}:')
         fig4 = px.line(df_home_price_evol, x=df_home_price_evol['Date'], y=df_home_price_evol[district], markers=True)

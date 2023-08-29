@@ -55,17 +55,17 @@ def city_streamlit(city):
         with col1:
 
             st.markdown('Total population')
-            st.metric(label='habitants', value = population['Population'][population['District']==district].values[0])
+            st.metric(label='habitants', value=population['Population'][population['District'] == district].values[0])
 
         with col2:
 
             st.markdown('Population density')
-            st.metric(label='habitants/km\u00b2', value = population['Density'][population['District']==district].values[0])
+            st.metric(label='habitants/km\u00b2', value=population['Density'][population['District'] == district].values[0])
 
         with col3:
 
             st.markdown('Total Airbnbs')
-            st.metric(label='units', value = '{:,}'.format(df[df['District'] == district].value_counts().sum()).replace(',','.'))
+            st.metric(label='units', value='{:,}'.format(df[df['District'] == district].value_counts().sum()).replace(',','.'))
 
         # Neighbourhood section
         st.markdown(f'#### Airbnbs in {district} neighbourhoods:')
