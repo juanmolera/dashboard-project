@@ -29,78 +29,70 @@ rent = pd.read_csv('../data/rent.csv')
 mean_price = pd.read_csv('../data/mean_price_june_may_2023_airbnb.csv')
 
 # Choose a district
-district = st.selectbox('Which district data do you want to visualize?', ['Choose an option'] + sorted(df['District'].unique().tolist()))
+#district = st.selectbox('Which district data do you want to visualize?', ['Choose an option'] + sorted(df['District'].unique().tolist()))
 
-if district in df['District'].unique().tolist():
+# Kepler map config
+with open(f'../data/config_madrid_rent.pickle', 'rb') as configuration:
+    config = pickle.load(configuration)
 
-    # Kepler map config
-    with open(f'../data/config_madrid_rent.pickle', 'rb') as configuration:
-        config = pickle.load(configuration)
+# Kepler map geojson
+with open(f'../data/neighbourhood_madrid.geojson', 'r') as f:
+    geojson = f.read()
 
-    # Kepler map geojson
-    with open(f'../data/neighbourhood_madrid.geojson', 'r') as f:
-        geojson = f.read()
+#map = KeplerGl(height=400, data={'airbnb_madrid': df[df['District'] == district]}, config=config)
+#map.add_data(data=geojson, name='neighbourhood_madrid')
 
-    map = KeplerGl(height=400, data={'airbnb_madrid': df[df['District'] == district]}, config=config)
-    map.add_data(data=geojson, name='neighbourhood_madrid')
+#st.markdown(f'#### Airbnbs in {district} district:')
+#keplergl_static(map)
 
-    st.markdown(f'#### Airbnbs in {district} district:')
-    #keplergl_static(map)
+col1, col2 = st.columns(2)
 
-    st.markdown(f'#### Airbnbs reviews in Madrid:')
-    fig = px.histogram(df_reviews_per_month, x=df_reviews_per_month['Month'], y=df_reviews_per_month['Airbnb reviews'], text_auto='.2s', color=df_reviews_per_month['Month'])
-    fig.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
-    fig.update_xaxes(tickangle = 270)
-    st.plotly_chart(fig, use_container_width=True)
+with col1:
 
-    col1, col2 = st.columns(2)
+    st.markdown(f'#### Mean price in May 2023')
+    fig1 = px.histogram(mean_price, x=mean_price['District'][mean_price['Month'] == 'May 2023'], y=mean_price['Mean price'][mean_price['Month'] == 'May 2023'], text_auto='.2s', color=mean_price['District'][mean_price['Month'] == 'May 2023'])
+    fig1.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
+    fig1.update_xaxes(categoryorder = 'total descending')
+    fig1.update_xaxes(tickangle = 270)
+    st.plotly_chart(fig1, use_container_width=True)
 
-    with col1:
+with col2:
 
-        st.markdown(f'#### Airbnbs reviews in May 2023')
-        fig1 = px.histogram(df_may_june, x=df_may_june['District'][df_may_june['Month'] == 'May 2023'], y=df_may_june['Airbnb reviews'][df_may_june['Month'] == 'May 2023'], text_auto='.2s', color=df_may_june['District'][df_may_june['Month'] == 'May 2023'])
-        fig1.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
-        fig1.update_xaxes(categoryorder = 'total descending')
-        fig1.update_xaxes(tickangle = 270)
-        st.plotly_chart(fig1, use_container_width=True)
+    st.markdown(f'#### Mean price in June 2023')
+    fig2 = px.histogram(mean_price, x=mean_price['District'][mean_price['Month'] == 'June 2023'], y=mean_price['Mean price'][mean_price['Month'] == 'June 2023'], text_auto='.2s', color=mean_price['District'][mean_price['Month'] == 'June 2023'])
+    fig2.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
+    fig2.update_xaxes(categoryorder = 'total descending')
+    fig2.update_xaxes(tickangle = 270)
+    st.plotly_chart(fig2, use_container_width=True)
 
-        st.markdown(f'#### Mean price in May 2023')
-        fig5 = px.histogram(mean_price, x=mean_price['District'][mean_price['Month'] == 'May 2023'], y=mean_price['Mean price'][mean_price['Month'] == 'May 2023'], text_auto='.2s', color=mean_price['District'][mean_price['Month'] == 'May 2023'])
-        fig5.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
-        fig5.update_xaxes(categoryorder = 'total descending')
-        fig5.update_xaxes(tickangle = 270)
-        st.plotly_chart(fig5, use_container_width=True)
+options = st.multiselect('What districts price info wanna viz?', sorted(df['District'].unique().tolist()))
 
-        st.markdown(f'#### Rent price evolution [euros/m2] in {district}:')
-        #fig2 = px.line(df_rent_price_evol, x=df_rent_price_evol['Date'], y=df_rent_price_evol[district], markers=True)
-        fig2 = px.line(rent, x=rent['Date'].unique().tolist(), y=rent['Value'][(rent['District']==district) & (rent['District']=='Arganzuela')], markers=True)
-        fig2.update_xaxes(tickangle = 270)
-        st.plotly_chart(fig2, use_container_width=True)
+if options:
 
-    with col2:
+    col3, col4 = st.columns(2)
 
-        st.markdown(f'#### Airbnbs reviews in June 2023')
-        fig3 = px.histogram(df_may_june, x=df_may_june['District'][df_may_june['Month'] == 'June 2023'], y=df_may_june['Airbnb reviews'][df_may_june['Month'] == 'June 2023'], text_auto='.2s', color=df_may_june['District'][df_may_june['Month'] == 'June 2023'])
-        fig3.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
-        fig3.update_xaxes(categoryorder = 'total descending')
+    with col3:
+
+        st.markdown(f'#### Rent price evolution [euros/m2]:')
+        #fig3 = px.line(df_rent_price_evol, x=df_rent_price_evol['Date'], y=df_rent_price_evol[district], markers=True)
+        #fig3 = px.line(rent, x=rent['Date'].unique().tolist(), y=rent['Value'][(rent['District']=='Chamartín') & (rent['District']=='Arganzuela')], markers=True)
+        #fig3.update_xaxes(tickangle = 270)
+
+        fig3 = px.line(rent, x=rent['Date'].unique().tolist(), y=rent['Value'][(rent['District']==options[0])], markers=True)
+
         fig3.update_xaxes(tickangle = 270)
+
+        for o in options[1:]:
+
+            fig3.add_scatter(x=rent['Date'].unique().tolist(), y=rent['Value'][(rent['District']==o)])
+
         st.plotly_chart(fig3, use_container_width=True)
+    
+    with col4:
 
-        st.markdown(f'#### Mean price in June 2023')
-        fig6 = px.histogram(mean_price, x=mean_price['District'][mean_price['Month'] == 'June 2023'], y=mean_price['Mean price'][mean_price['Month'] == 'June 2023'], text_auto='.2s', color=mean_price['District'][mean_price['Month'] == 'June 2023'])
-        fig6.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
-        fig6.update_xaxes(categoryorder = 'total descending')
-        fig6.update_xaxes(tickangle = 270)
-        st.plotly_chart(fig6, use_container_width=True)
-
-        st.markdown(f'#### Second hand home price evolution [euros] in {district}:')
-        fig4 = px.line(df_home_price_evol, x=df_home_price_evol['Date'], y=df_home_price_evol[district], markers=True)
+        st.markdown(f'#### Second hand home price evolution [euros]:')
+        fig4 = px.line(df_home_price_evol, x=df_home_price_evol['Date'], y=df_home_price_evol['Chamartín'], markers=True)
         fig4.add_scatter(x=df_home_price_evol['Date'], y=df_home_price_evol['Centro'])
         fig4.add_scatter(x=df_home_price_evol['Date'], y=df_home_price_evol['Chamartín'])
         fig4.update_xaxes(tickangle = 270)
         st.plotly_chart(fig4, use_container_width=True)
-
-
-    
-
-    
