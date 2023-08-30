@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 
-st.set_page_config(page_title='Main', page_icon='🏠', layout='wide', initial_sidebar_state='expanded')
+st.set_page_config(layout='wide', initial_sidebar_state='collapsed', page_title='Main', page_icon='🏠')
 
 # CSS access
 with open('css/style.css') as f:
