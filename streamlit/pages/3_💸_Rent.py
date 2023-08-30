@@ -6,6 +6,7 @@ import pandas as pd
 
 # Data visualization
 import plotly.express as px
+import plotly.graph_objects as go
 
 # Kepler.gl maps
 from streamlit_keplergl import keplergl_static
@@ -49,23 +50,27 @@ col1, col2 = st.columns(2)
 
 with col1:
 
-    st.markdown(f'#### Mean price in May 2023')
+    st.markdown(f'#### Mean price in May 2023:')
     fig1 = px.histogram(mean_price, x=mean_price['District'][mean_price['Month'] == 'May 2023'], y=mean_price['Mean price'][mean_price['Month'] == 'May 2023'], text_auto='.2s', color=mean_price['District'][mean_price['Month'] == 'May 2023'])
     fig1.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
     fig1.update_xaxes(categoryorder = 'total descending')
     fig1.update_xaxes(tickangle = 270)
+    fig1.update_xaxes(title='District')
+    fig1.update_yaxes(title='Euros')
     st.plotly_chart(fig1, use_container_width=True)
 
 with col2:
 
-    st.markdown(f'#### Mean price in June 2023')
+    st.markdown(f'#### Mean price in June 2023:')
     fig2 = px.histogram(mean_price, x=mean_price['District'][mean_price['Month'] == 'June 2023'], y=mean_price['Mean price'][mean_price['Month'] == 'June 2023'], text_auto='.2s', color=mean_price['District'][mean_price['Month'] == 'June 2023'])
     fig2.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
     fig2.update_xaxes(categoryorder = 'total descending')
     fig2.update_xaxes(tickangle = 270)
+    fig2.update_xaxes(title='District')
+    fig2.update_yaxes(title='Euros')
     st.plotly_chart(fig2, use_container_width=True)
 
-options = st.multiselect('What districts price info wanna viz?', sorted(df['District'].unique().tolist()))
+options = st.multiselect('What districts price info wanna viz?:', sorted(df['District'].unique().tolist()))
 
 if options:
 
@@ -73,26 +78,28 @@ if options:
 
     with col3:
 
-        st.markdown(f'#### Rent price evolution [euros/m2]:')
-        #fig3 = px.line(df_rent_price_evol, x=df_rent_price_evol['Date'], y=df_rent_price_evol[district], markers=True)
-        #fig3 = px.line(rent, x=rent['Date'].unique().tolist(), y=rent['Value'][(rent['District']=='Chamartín') & (rent['District']=='Arganzuela')], markers=True)
-        #fig3.update_xaxes(tickangle = 270)
+        st.markdown(f'#### Rent price evolution:')
+        fig3 = go.Figure()
+        for o in options:
 
-        fig3 = px.line(rent, x=rent['Date'].unique().tolist(), y=rent['Value'][(rent['District']==options[0])], markers=True)
+            fig3.add_trace(go.Scatter(x=df_rent_price_evol['Date'].unique().tolist(), y=df_rent_price_evol[o], name = o))
 
         fig3.update_xaxes(tickangle = 270)
-
-        for o in options[1:]:
-
-            fig3.add_scatter(x=rent['Date'].unique().tolist(), y=rent['Value'][(rent['District']==o)])
-
+        fig3.update_xaxes(title='Date')
+        fig3.update_yaxes(title='Euros/m\u00b2')
+        fig3.update_layout(hovermode="x unified")
         st.plotly_chart(fig3, use_container_width=True)
     
     with col4:
 
-        st.markdown(f'#### Second hand home price evolution [euros]:')
-        fig4 = px.line(df_home_price_evol, x=df_home_price_evol['Date'], y=df_home_price_evol['Chamartín'], markers=True)
-        fig4.add_scatter(x=df_home_price_evol['Date'], y=df_home_price_evol['Centro'])
-        fig4.add_scatter(x=df_home_price_evol['Date'], y=df_home_price_evol['Chamartín'])
+        st.markdown(f'#### Second-hand home price evolution:')
+        fig4 = go.Figure()
+        for o in options:
+
+            fig4.add_trace(go.Scatter(x=df_home_price_evol['Date'].unique().tolist(), y=['{:,}'.format(x).replace(',','.') for x in df_home_price_evol[o].tolist()], name = o))
+        
         fig4.update_xaxes(tickangle = 270)
+        fig4.update_xaxes(title='Date')
+        fig4.update_yaxes(title='x1K Euros')
+        fig4.update_layout(hovermode="x unified")
         st.plotly_chart(fig4, use_container_width=True)
