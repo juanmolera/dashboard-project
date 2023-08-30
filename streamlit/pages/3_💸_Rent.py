@@ -37,7 +37,7 @@ pal = ['#08566d','#0a657f','#0b7392','#0d82a4','#0e90b6','#0f9ec8','#11addb','#1
 #district = st.selectbox('Which district data do you want to visualize?', ['Choose an option'] + sorted(df['District'].unique().tolist()))
 
 # Kepler map config
-with open(f'../data/config_madrid_rent.pickle', 'rb') as configuration:
+with open(f'../data/config_madrid_rent_new.pickle', 'rb') as configuration:
     config = pickle.load(configuration)
 
 # Kepler map geojson
@@ -45,10 +45,11 @@ with open(f'../data/neighbourhood_madrid.geojson', 'r') as f:
     geojson = f.read()
 
 #map = KeplerGl(height=400, data={'airbnb_madrid': df[df['District'] == district]}, config=config)
-#map.add_data(data=geojson, name='neighbourhood_madrid')
+map = KeplerGl(height=400, data={'airbnb_madrid': df}, config=config)
+map.add_data(data=geojson, name='neighbourhood_madrid')
 
 #st.markdown(f'#### Airbnbs in {district} district:')
-#keplergl_static(map)
+keplergl_static(map)
 
 col1, col2 = st.columns(2)
 
