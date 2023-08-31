@@ -43,12 +43,15 @@ def histogram_viz(df, option):
                         x=df['district'], 
                         y=df['total'], 
                         color=df['district'], 
+                        text_auto='.2s', 
                         color_discrete_sequence=blues['Code'].tolist())
     
-    fig.update_xaxes(categoryorder='total descending')
+    fig.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
+    fig.update_xaxes(categoryorder = 'total descending')
     fig.update_xaxes(title='', visible=False, showticklabels=False)
     fig.update_yaxes(title='', visible=True, showticklabels=True)
-    fig.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
+    fig.update_xaxes(title='District')
+    fig.update_yaxes(title='Count')
     #fig.update_traces(hovertemplate = None, hoverinfo = 'skip')
     
 
@@ -76,12 +79,14 @@ def histogram_with_filter_viz(df, option, option2, filter):
                         x=df['neighbourhood'], 
                         y=df['total'], 
                         color=df['neighbourhood'], 
+                        text_auto='.2s', 
                         color_discrete_sequence=blues['Code'].tolist())
     
-    fig.update_xaxes(categoryorder='total descending')
+    fig.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
+    fig.update_xaxes(categoryorder = 'total descending')
     fig.update_xaxes(title='', visible=False, showticklabels=False)
     fig.update_yaxes(title='', visible=True, showticklabels=True)
-    fig.update_layout(legend_traceorder='normal')
-    fig.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
+    fig.update_xaxes(title='Neighbourhood')
+    fig.update_yaxes(title='Count')
 
     return fig
