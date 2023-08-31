@@ -60,7 +60,24 @@ def histogram_with_filter_viz(df, option, option2, filter):
     Creates histogram representation for the chosen district's neighbourhoods
     '''
 
-    fig = px.histogram(df, x=df[option2][df[option] == filter], text_auto='.2s', color=df[option2][df[option] == filter], labels={'x': 'Neighbourhood'}, color_discrete_sequence=px.colors.qualitative.Light24)
+    airbnbs_per_neighbourhood_madrid = {'neighbourhood': [], 'total': []}
+    unique_neighbourhood = df['Neighbourhood'][df['District'] == filter].unique()
+
+    for u in unique_neighbourhood:
+
+        airbnbs_per_neighbourhood_madrid['neighbourhood'].append(u)
+        airbnbs_per_neighbourhood_madrid['total'].append(df[df['Neighbourhood'] == u].value_counts().sum())
+
+    df = pd.DataFrame.from_dict(airbnbs_per_neighbourhood_madrid)
+    df = df.sort_values(by=['total'], ascending=False)
+
+    #fig = px.histogram(df, x=df[option2][df[option] == filter], text_auto='.2s', color=df[option2][df[option] == filter], labels={'x': 'Neighbourhood'}, color_discrete_sequence=px.colors.qualitative.Light24)
+    fig = px.histogram(df, 
+                        x=df['neighbourhood'], 
+                        y=df['total'], 
+                        color=df['neighbourhood'], 
+                        color_discrete_sequence=blues['Code'].tolist())
+    
     fig.update_xaxes(categoryorder='total descending')
     fig.update_xaxes(title='', visible=False, showticklabels=False)
     fig.update_yaxes(title='', visible=True, showticklabels=True)
