@@ -26,10 +26,10 @@ def city_streamlit(city):
     population = pd.read_csv('../data/population_and_density_by_district.csv')
 
     # District section
-    st.markdown(f'#### Airbnbs per district in {city}:')
+    st.markdown(f'#### Airbnbs heatmap per district in {city}:')
 
     # Kepler map config
-    with open(f'../data/config_{city}.pickle', 'rb') as configuration:
+    with open(f'../data/config_{city.lower()}_airbnb.pickle', 'rb') as configuration:
         config = pickle.load(configuration)
 
     # Kepler map geojson
@@ -38,6 +38,9 @@ def city_streamlit(city):
 
     # Kepler map
     #keplergl_static(viz.kepler_map_viz(city.lower(), df, geojson, config))
+
+    # District section
+    st.markdown(f'#### Total airbnbs per district in {city}:')
 
     # Districts histogram
     st.plotly_chart(viz.histogram_viz(df, 'District'), use_container_width=True)
@@ -68,7 +71,7 @@ def city_streamlit(city):
             st.metric(label='units', value='{:,}'.format(df[df['District'] == district].value_counts().sum()).replace(',','.'))
 
         # Neighbourhood section
-        st.markdown(f'#### Airbnbs in {district} neighbourhoods:')
+        st.markdown(f'#### Total airbnbs per neighbourhood in {district} district:')
 
         # Neighbourhoods histogram
         st.plotly_chart(viz.histogram_with_filter_viz(df, 'District', 'Neighbourhood', district), use_container_width=True)

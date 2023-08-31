@@ -5,6 +5,11 @@ import plotly.express as px
 from streamlit_keplergl import keplergl_static
 from keplergl import KeplerGl
 
+import pandas as pd
+
+# Color palette
+blues = pd.read_csv('../data/blues.csv')
+
 # Kepler.gl map viz
 def kepler_map_viz(city, df, geojson, config):
     '''
@@ -21,12 +26,28 @@ def histogram_viz(df, option):
     '''
     Creates histogram representation for the chosen city's districts
     '''
+    unique_district = df['District'].unique()
+    
+    airbnbs_per_district = {'district': [], 'total': []}
 
-    fig = px.histogram(df, x=df[option], text_auto='.2s', color=df[option], labels={'x': 'Districts'}, color_discrete_sequence=px.colors.qualitative.Light24)
+    for u in unique_district:
+
+        airbnbs_per_district['district'].append(u)
+        airbnbs_per_district['total'].append(df[df['District'] == u].value_counts().sum())
+
+    df = pd.DataFrame.from_dict(airbnbs_per_district)
+    df = df.sort_values(by=['total'], ascending=False)
+
+    #fig = px.histogram(df, x=df[option], text_auto='.2s', color=df[option], labels={'x': 'Districts'}, color_discrete_sequence=px.colors.qualitative.Light24)
+    fig = px.histogram(df, 
+                        x=df['district'], 
+                        y=df['total'], 
+                        color=df['district'], 
+                        color_discrete_sequence=blues['Code'].tolist())
+    
     fig.update_xaxes(categoryorder='total descending')
     fig.update_xaxes(title='', visible=False, showticklabels=False)
     fig.update_yaxes(title='', visible=True, showticklabels=True)
-    fig.update_layout(legend_traceorder='normal')
     fig.update_traces(textfont_size=12, textangle=0, textposition='outside', cliponaxis=False)
     #fig.update_traces(hovertemplate = None, hoverinfo = 'skip')
     
