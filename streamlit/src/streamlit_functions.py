@@ -37,7 +37,7 @@ def city_streamlit(city):
         geojson = f.read()
 
     # Kepler map
-    #keplergl_static(viz.kepler_map_viz(city.lower(), df, geojson, config))
+    keplergl_static(viz.kepler_map_viz(city.lower(), df, geojson, config))
 
     # District section
     st.markdown(f'#### Total airbnbs per district in {city}:')
