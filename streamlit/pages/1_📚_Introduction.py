@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 
-st.set_page_config(layout='wide', initial_sidebar_state='collapsed', page_title='Context', page_icon='📚')
+st.set_page_config(layout='wide', initial_sidebar_state='collapsed', page_title='Introduction', page_icon='📚')
 
 # CSS access
 with open('css/style.css') as f:
@@ -9,12 +9,17 @@ with open('css/style.css') as f:
         f'<style>{f.read()}</style>',
         unsafe_allow_html=True)
 
-st.markdown('# Context')
+st.markdown('# Introduction')
 
-st.markdown('## Airbnb')
+st.markdown('## Motivation')
+st.write('This is my second project of the Ironhack data analysis bootcamp and it is focused on the comparative analysis between Spain and Portugal regarding the situation of Airbnb rental apartments and how this situation can affect the different districts of the city of Madrid.')
+
+st.markdown('## Context')
+
+st.markdown('### Airbnb')
 st.write('Airbnb, Inc. is an American San Francisco-based company operating an online marketplace for short- and long-term homestays and experiences. The company acts as a broker and charges a commission from each booking. The company was founded in 2008 by Brian Chesky, Nathan Blecharczyk, and Joe Gebbia. Airbnb is a shortened version of its original name, AirBedandBreakfast.com. The company is credited with revolutionizing the tourism industry, while also having been the subject of intense criticism by residents of tourism hotspot cities like Barcelona and Venice for enabling an unaffordable increase in home rents, and for a lack of regulation.')
 
-st.markdown('## The Portugal case')
+st.markdown('### The Portugal case (Mais Habitaçao)')
 st.write('The Portuguese government is making new restrictions on short-term rentals to protect the housing market and ensure that the number of tourist apartments doesn’t increase dramatically. This comes after Prime Minister Antonio Costa said he was worried that Portugal would become a “Disneyland” if more and more people began to rent out their apartments as holiday homes.')
 st.write('The 16th of february 2023, Portugal Goverment aproved MAIS HABITAÇAO:')
 st.markdown('1. INCREASE THE OFFER OF PROPERTIES FOR HOUSING')
@@ -36,6 +41,6 @@ st.markdown('- IN HOME CREDIT: OBLIGATION OF BANKS OFFER FIXED RATE, PROTECTION 
 st.markdown('- IN THE VALUE OF INCOME')
 
 
-st.markdown('## Will Spain follow the same path?')
+st.markdown('### Will Spain follow the same path?')
 image = Image.open('images/graffiti.png')
 st.image(image, use_column_width=True)
