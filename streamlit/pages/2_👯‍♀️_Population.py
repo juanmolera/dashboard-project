@@ -11,10 +11,10 @@ import random
 from src import streamlit_functions as lit
 
 # Streamlit page configuration
-st.set_page_config(layout='wide', initial_sidebar_state='collapsed', page_title='Comparative', page_icon='👯‍♀️')
+st.set_page_config(layout='wide', initial_sidebar_state='collapsed', page_title='Population', page_icon='👯‍♀️')
 
 # Title
-st.markdown('# Comparative viz')
+st.markdown('# Spain-Portugal Airbnb volume and population indices')
 
 # Availables cities to choose
 cities = ['Madrid', 'Porto', 'Lisbon']

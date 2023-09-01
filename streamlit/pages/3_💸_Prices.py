@@ -19,10 +19,10 @@ from keplergl import KeplerGl
 import pickle
 
 # Streamlit page configuration
-st.set_page_config(layout='wide', initial_sidebar_state='collapsed', page_title='Extras', page_icon='💸')
+st.set_page_config(layout='wide', initial_sidebar_state='collapsed', page_title='Prices', page_icon='💸')
 
 # Title
-st.markdown('# Rent evolution viz')
+st.markdown('# Airbnb, rental and second-hand home prices in Madrid')
 
 # Dataframes creation
 df_airbnb_madrid = pd.read_csv('../data/airbnb_madrid.csv')
@@ -45,14 +45,14 @@ with open('../data/neighbourhood_madrid.geojson', 'r') as f:
 map = KeplerGl(height=400, data={'airbnb_madrid': df_airbnb_madrid}, config=config)
 map.add_data(data=geojson, name='neighbourhood_madrid')
 
-st.markdown('#### Airbnb price per volume in Madrid:')
+st.markdown('#### Airbnb mean price per density in Madrid:')
 keplergl_static(map)
 
 col1, col2 = st.columns(2)
 
 with col1:
 
-    st.markdown('#### Airbnb mean price in May 2023:')
+    st.markdown('#### Airbnb mean price per district in May 2023:')
     fig1 = px.histogram(df_mean_price, 
                         x=df_mean_price_may_2023['District'], 
                         y=df_mean_price_may_2023['Mean price'],
@@ -72,7 +72,7 @@ with col1:
 
 with col2:
 
-    st.markdown('#### Airbnb mean price in June 2023:')
+    st.markdown('#### Airbnb mean price per district in June 2023:')
     fig2 = px.histogram(df_mean_price, 
                         x=df_mean_price_june_2023['District'], 
                         y=df_mean_price_june_2023['Mean price'], 
@@ -90,7 +90,7 @@ with col2:
     fig2.update_yaxes(title='Euros')
     st.plotly_chart(fig2, use_container_width=True)
 
-options = st.multiselect('Which districts price info wanna viz?:', sorted(df_airbnb_madrid['District'].unique().tolist()))
+options = st.multiselect('From which districts would you like to visualize the information on the evolution of rental and purchase prices of second-hand homes?', sorted(df_airbnb_madrid['District'].unique().tolist()))
 
 if options:
 
@@ -120,6 +120,6 @@ if options:
         
         fig4.update_xaxes(tickangle = 270)
         fig4.update_xaxes(title='Date')
-        fig4.update_yaxes(title='x1K Euros')
+        fig4.update_yaxes(title='Thousands of Euros')
         fig4.update_layout(hovermode="x unified")
         st.plotly_chart(fig4, use_container_width=True)
