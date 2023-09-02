@@ -55,3 +55,8 @@ The 16th of february 2023, Portugal Goverment aproved MAIS HABITAÇAO, with the 
 - [Pandas](https://pandas.pydata.org/)
 - [Streamlit](https://docs.streamlit.io/)
 - [Kepler](https://kepler.gl/)
+
+### Run
+`git clone this repo`
+`cd streamlit`
+`streamlit run 🏠Main.py`

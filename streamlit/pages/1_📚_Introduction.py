@@ -26,6 +26,7 @@ st.write('Airbnb, Inc. is an American San Francisco-based company operating an o
 
 st.markdown('### The Portugal case')
 st.write('The Portuguese government is making new restrictions on short-term rentals to protect the housing market and ensure that the number of tourist apartments doesn’t increase dramatically. This comes after Prime Minister Antonio Costa said he was worried that Portugal would become a “Disneyland” if more and more people began to rent out their apartments as holiday homes.')
+st.write('Portugal has a licensing system for vacation rentals (such as Airbnb) called Alojamento Local. These licenses are granted by the municipal chambers and it is not possible to operate the platforms without them. From March 2023, if the law is passed, no more Airbnb licenses will be granted except in inland towns where they can help revive the economy. Those who already have one will have to pay higher taxes to finance permanent habitation and a review of all licenses will be carried out in 2030.')
 st.write('The 16th of february 2023, Portugal Goverment aproved MAIS HABITAÇAO, with the following key points:')
 st.markdown(' ##### 1. Increase the offer of properties for housing')
 st.markdown('- Convert the use of commercial property or services for use housing')
