@@ -29,7 +29,7 @@ The 16th of february 2023, Portugal Goverment aproved MAIS HABITAÇAO, with the 
 - License with the term of responsability from the designers
 - Delay the interest for breach deadlines of licensing
 ##### 3. Increase the number of houses in the rental market
-- Reinforce the confidence from landlords: state leases to sublease, guarantee state payment after 3 months default (or charges, or support or empty)')
+- Reinforce the confidence from landlords: state leases to sublease, guarantee state payment after 3 months default (or charges, or support or empty)
 - Increase the public offer: exemption from gains in real estate sales to the state
 - Promoting affordable rent: financing to municipalities to carry out coercive works, transfer incentive for housing in houses in local accommodation, lease mandatory of houses returns, tax exemption to affordable rental
 ##### 4. Fight the speculation
