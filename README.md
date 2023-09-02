@@ -22,7 +22,26 @@ The Portuguese government is making new restrictions on short-term rentals to pr
 
 The 16th of february 2023, Portugal Goverment aproved MAIS HABITAÇAO, with the following key points:
 
+##### 1. Increase the offer of properties for housing
+- Convert the use of commercial property or services for use housing
+- Provide properties of the state in regime of CDH
+##### 2. Simplify the processes of licensing
+- License with the term of responsability from the designers
+- Delay the interest for breach deadlines of licensing
+##### 3. Increase the number of houses in the rental market
+- Reinforce the confidence from landlords: state leases to sublease, guarantee state payment after 3 months default (or charges, or support or empty)')
+- Increase the public offer: exemption from gains in real estate sales to the state
+- Promoting affordable rent: financing to municipalities to carry out coercive works, transfer incentive for housing in houses in local accommodation, lease mandatory of houses returns, tax exemption to affordable rental
+##### 4. Fight the speculation
+- End of gold visas
+- Guarantee of fair income in new contracts
+##### 5. Protect the families
+- Exemption of gains for amortization of home credit own and from descendants
+- In home credit: obligation of banks offer fixed rate, protection on climbs interest rate
+- In the value of income
 
+### Will Spain follow the same path?
+![graffiti](/streamlit/images/graffiti.png)
 
 
 ### Information sources:
