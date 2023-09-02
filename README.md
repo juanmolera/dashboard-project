@@ -58,5 +58,7 @@ The 16th of february 2023, Portugal Goverment aproved MAIS HABITAÇAO, with the 
 
 ### Run
 `git clone this repo`
+
 `cd streamlit`
+
 `streamlit run 🏠Main.py`
