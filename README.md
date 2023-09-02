@@ -57,7 +57,7 @@ The 16th of february 2023, Portugal Goverment aproved MAIS HABITAÇAO, with the 
 - [Kepler](https://kepler.gl/)
 
 ### Run
-`git clone this repo`
+`git clone url-to-this-repo`
 
 `cd streamlit`
 
